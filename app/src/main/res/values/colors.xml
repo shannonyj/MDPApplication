@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <item name="color_maze_original" type="color">#4E7FA5</item>
+        <color name="color_obstacle">#FD0006</color>
+        <color name="color_freespace">#98BAD4</color>
+        <color name="color_robot">#00E55D</color>
+        <color name="color_head">#FFFFFF</color>
+        <color name="color_background_app">#266595</color>
+        <color name="color_clear">#98BAD4</color>
+
+        <color name="color_button_background">#98BAD4</color>
+        <color name="color_button_text">#042F51</color>
+        <color name="color_greyed_out_update">#636E75</color>
+
+</resources>

@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:switch="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="330dp"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="297dp"
+            android:layout_marginTop="14dp" >
+
+            <EditText
+                android:id="@+id/editF1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/holo_orange_dark"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editF2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editF1"
+                android:layout_below="@+id/editF1"
+                android:layout_marginTop="39dp"
+                android:background="@android:color/holo_orange_dark"
+                android:ems="10" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editF3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editF1"
+                android:layout_below="@+id/editF2"
+                android:layout_marginTop="39dp"
+                android:background="@android:color/holo_orange_dark"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editF4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editF1"
+                android:layout_below="@+id/editF3"
+                android:layout_marginTop="39dp"
+                android:background="@android:color/holo_orange_dark"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editF5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editF1"
+                android:layout_below="@+id/editF4"
+                android:layout_marginTop="39dp"
+                android:background="@android:color/holo_orange_dark"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editF6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editF1"
+                android:layout_below="@+id/editF5"
+                android:layout_marginTop="39dp"
+                android:background="@android:color/holo_orange_dark"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editF4"
+                android:layout_below="@+id/editF6"
+                android:layout_marginTop="39dp"
+                android:background="@android:color/holo_orange_dark"
+                android:ems="10" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editF6"
+                android:layout_below="@+id/editStart"
+                android:onClick="onSaveBtnClicked"
+                android:text="@string/savePref" />
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/editF6"
+                android:layout_below="@+id/editStart"
+                android:onClick="onClearBtnClicked"
+                android:text="@string/cancelPref" />
+
+            <TextView
+                android:id="@+id/textViewF1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editF1"
+                android:layout_alignBottom="@+id/editF1"
+                android:layout_toLeftOf="@+id/editF2"
+                android:text="@string/F1" />
+
+            <TextView
+                android:id="@+id/textViewF2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editF2"
+                android:layout_alignBottom="@+id/editF2"
+                android:layout_toLeftOf="@+id/editF3"
+                android:text="@string/F2" />
+            
+            <TextView
+                android:id="@+id/textViewF3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editF3"
+                android:layout_alignBottom="@+id/editF3"
+                android:layout_toLeftOf="@+id/editF4"
+                android:text="@string/F3" />
+            
+            <TextView
+                android:id="@+id/textViewF4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editF4"
+                android:layout_alignBottom="@+id/editF4"
+                android:layout_toLeftOf="@+id/editF5"
+                android:text="@string/F4" />
+            
+            <TextView
+                android:id="@+id/textViewF5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editF5"
+                android:layout_alignBottom="@+id/editF5"
+                android:layout_toLeftOf="@+id/editF6"
+                android:text="@string/F5" />
+            
+            <TextView
+                android:id="@+id/textViewF6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editF6"
+                android:layout_alignBottom="@+id/editF6"
+                android:layout_toLeftOf="@+id/editStart"
+                android:text="@string/F6" />
+            
+            <TextView
+                android:id="@+id/textViewStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editStart"
+                android:layout_alignBottom="@+id/editStart"
+                android:layout_toLeftOf="@+id/editStart"
+                android:text="@string/startBtn" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
