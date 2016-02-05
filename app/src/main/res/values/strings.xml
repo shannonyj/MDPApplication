@@ -29,6 +29,7 @@
     <string name="startBtn">Start</string>
     <string name="sendStartBtn">Send Start</string>
     <string name="rb_status">Status</string>
+    <string name="con_status">Connection</string>
     <string name="rb_timer">Timer</string>
     <string name="setFunctionButton">Set Function Button</string>
 

@@ -22,12 +22,11 @@
             android:id="@+id/reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:drawableTop="@drawable/reset"
             android:text="@string/reset"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/ButtonRight"
             android:layout_toEndOf="@+id/ButtonRight" />
+        <!--android:drawableTop="@drawable/reset"-->
 
         <!--Right-->
         <Button
@@ -36,7 +35,7 @@
             android:layout_height="40dp"
             android:drawableTop="@drawable/arrow_right"
 
-            android:layout_below="@+id/ButtonUP"
+            android:layout_above="@+id/ButtonDown"
             android:layout_toRightOf="@+id/sendStart"
             android:layout_toEndOf="@+id/sendStart" />
         <!--Left-->
@@ -46,62 +45,62 @@
             android:layout_height="40dp"
             android:drawableTop="@drawable/arrow_left"
 
-            android:layout_below="@+id/ButtonUP"
+            android:layout_above="@+id/ButtonDown"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
         <!--Start Button-->
         <Button
             android:id="@+id/sendStart"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:drawableTop="@drawable/send_start"
             android:text="@string/sendStartBtn"
-            android:layout_below="@+id/ButtonUP"
-            android:layout_alignLeft="@+id/ButtonUP"
-            android:layout_alignStart="@+id/ButtonUP" />
+            android:layout_alignTop="@+id/reset"
+            android:layout_toRightOf="@+id/ButtonLeft"
+            android:layout_toEndOf="@+id/ButtonLeft" />
 
         <!--Up-->
         <Button
             android:id="@+id/ButtonUP"
-            android:layout_width="40dp"
+            android:layout_width="80dp"
             android:layout_height="40dp"
             android:drawableTop="@drawable/arrow_up"
-            android:layout_alignTop="@+id/reset"
-            android:layout_toRightOf="@+id/ButtonLeft"
-            android:layout_toEndOf="@+id/ButtonLeft" />
+            android:layout_above="@+id/gridManual_Auto"
+            android:layout_alignRight="@+id/sendStart"
+            android:layout_alignEnd="@+id/sendStart" />
+
         <!--Down-->
         <Button
             android:id="@+id/ButtonDown"
-            android:layout_width="40dp"
+            android:layout_width="80dp"
             android:layout_height="40dp"
             android:drawableTop="@drawable/arrow_down"
             android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/ButtonUP"
-            android:layout_alignStart="@+id/ButtonUP" />
+            android:layout_alignLeft="@+id/sendStart"
+            android:layout_alignStart="@+id/sendStart" />
 
 
         <ToggleButton
             android:id="@+id/gridManual_Auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:drawableTop="@drawable/auto_toggle"
             android:textOff="@string/manualMode"
             android:textOn="@string/autoMode"
             android:layout_alignBottom="@+id/reset"
             android:layout_toRightOf="@+id/reset"
             android:layout_toEndOf="@+id/reset" />
+        <!--android:drawableTop="@drawable/auto_toggle"-->
 
         <Button
             android:id="@+id/gridUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:drawableTop="@drawable/auto_update"
             android:text="@string/update"
             android:layout_alignBottom="@+id/gridManual_Auto"
             android:layout_toRightOf="@+id/gridManual_Auto"
             android:layout_toEndOf="@+id/gridManual_Auto" />
+        <!--android:drawableTop="@drawable/auto_update"-->
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -125,25 +124,12 @@
             <RelativeLayout
                 android:id="@+id/centerBottomLayout"
                 android:layout_width="500dp"
-                android:layout_height="100dp"
+                android:layout_height="60dp"
                 android:background="@drawable/bgbottom"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true">
 
-
-                <TextView
-                    android:id="@+id/feedback"
-                    android:layout_width="250dp"
-                    android:layout_height="80dp"
-                    android:layout_alignParentBottom="true"
-
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:textSize="24sp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_alignLeft="@+id/timerValue"
-                    android:layout_alignStart="@+id/timerValue" />
 
                 <TextView
                     android:id="@+id/textTimer"
@@ -152,8 +138,8 @@
                     android:text="@string/rb_timer"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginRight="23dp"
-                    android:layout_marginEnd="23dp"
+                    android:layout_marginRight="43dp"
+                    android:layout_marginEnd="43dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true" />
@@ -174,14 +160,50 @@
                     android:id="@+id/textStatus"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="23dp"
                     android:text="@string/rb_status"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/feedback"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/connectionStatus"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/con_status"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/connectionfeedback"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_toLeftOf="@+id/feedback"
                     android:layout_toStartOf="@+id/feedback"
-                    android:layout_marginEnd="23dp" />
+                    android:layout_alignTop="@+id/feedback" />
+
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
@@ -273,10 +295,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                <!--android:layout_alignRight="@+id/ButtonF"-->
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="18dp"
                 android:text="@string/SwitchManual" />
+            <!--android:layout_alignRight="@+id/ButtonF"-->
 
             <Button
                 android:id="@+id/ButtonF6"
